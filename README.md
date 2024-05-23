@@ -9,7 +9,7 @@
 
 <h3 align="left">Connect with me:</h3>
 <p align="left">
-<a href="https://linkedin.com/in/i̇rem kasar" target="blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/linked-in-alt.svg" alt="i̇rem kasar" height="30" width="40" /></a>
+<a href="https://linkedin.com/in/www.linkedin.com/in/irem-kasar-8682a7202" target="blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/linked-in-alt.svg" alt="www.linkedin.com/in/irem-kasar-8682a7202" height="30" width="40" /></a>
 <a href="https://medium.com/@irembn00" target="blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/medium.svg" alt="@irembn00" height="30" width="40" /></a>
 </p>
 
