@@ -1,0 +1,201 @@
+# NOTLARIM:
+# print() Fonksiyonu Nedir, Ne İşe Yarar ve Yorum Satırları
+# print= çıktı vermeyi sağlar
+
+print("hello world")
+print('hello world')
+print("""hello world""")
+
+# print yazmazsan başına, iki şeyi sırasıyla yazdırdığın zaman ikincisini yazdırıyor sadece.
+# sep: ayırıcı görevi görür.
+
+print("hello", "hello", sep=",")
+print("python", "öğreniyorum")  # virgülsüz yazar
+print("python", "öğreniyorum", sep=",")  # virgüllü yazar
+print("python", "öğreniyorum", sep="/")
+
+# end: parametrenin sonuna ne gelecek onu belirler
+
+print("yetgen dikeyine hoş geldiniz", end=". ")
+print("yetgen dikeyine hoş geldiniz", end=" ")
+
+# çift tırnak daha garanti printli fonk. yazarken
+# print "hello world" #yanlış
+# print (hello) #yanlış
+
+print(3.14)  # doğru
+
+'''
+Bu da bir yorum satırıdır.
+'''
+
+# variables, değişkenler: bir verinin değerini saklamayı sağlarlar
+
+yetgen = "YetGen"
+print(yetgen)
+yetgen = "YetGen Jump"
+print(yetgen)
+
+# 1irem="irem" #yanlış
+# print(1irem) #yanlış
+
+_irem = "irem"
+irem = "irem"
+print(irem)
+print(_irem)
+
+# adlandırırken türkçe karakter kullanma
+
+sayı = 5
+print(sayı)
+sayi = 5
+print(sayi)
+
+isimSoyisim = "Berkcan Gümüşışık"
+isim_soyisim = "Ahmet Ekici"
+# isim soyisim = "Eslem Güser" # yanlış kullanım, boşluk içeremez
+
+print(isimSoyisim)  # doğru kullanım camelCase
+print(isim_soyisim)  # doğru kullanım snake_case
+# print(isim soyisim) #hatalı kullanım
+
+isim = "A"
+Isim = "B"  # büyük küçük harf duyarlı
+print(isim)
+print(Isim)
+
+ahmetinArabasininRengi = "Mavi"
+renk = "Mavi"
+print(renk)
+
+# type() komutu: bir verinin türünü söyler
+
+print(type("Berkcan"))
+print(type(1))
+print(type(True))
+print(type(3.14))
+print(type("True"))
+print(type("3.14"))
+
+# int: tam sayıları ifade eder
+print(10)
+
+# float: ondalıklı sayıları ifade eder. 2 rakam birbirine bölününce gerçek sonuca ulaşmak için bu tarz değerler girilir.
+
+pi = 3.14
+print(pi)
+print(type(pi))
+
+a = 4
+b = 3
+print(a + b)
+print(a - b)
+print(a * b)
+print(a / b)
+# print(2 / 0) 2'yi 0'a bölemeyiz
+print(2 ** 3)  # üstel işlem (2^3 demek yerine 2**3)
+print(a % b)
+print(a / b)
+
+# string: metinsel ifadeler
+# bir iki ve üç tırnaklı yazılabilir.
+
+degisken = "merhaba python"
+print(degisken)
+# degisken="python öğreniyorum' yanlış
+print(degisken[0])
+print(degisken[-1])
+
+isim = "Berkcan"
+soyisim = "Gümüşışık"
+yas = 23
+print(isim + " " + soyisim)
+# print(isim + " " + soyisim + " " + yas) yanlış
+print(isim, " ", soyisim, " ", yas)
+print(f"{isim} {soyisim} {yas}")  # bir diğer ihtimal (f burada format anlamında)
+
+# boolean: true ya da false değer döndürür
+
+me = True
+print(me)
+print(type(me))
+
+# input: kullanıcıdan veri almak için. sayı alırken int ya da float kullanılır.
+
+isim = input("isim girin:")  # bunun cevabına f dendi ve altta çağırıldı
+print(f"merhaba {isim}")
+print("merhaba", isim)
+print("merhaba" + isim)
+
+# Kullanıcıdan Sayı Alma
+
+sayi1 = int(input("1. sayıyı gir: "))
+sayi2 = int(input("2. sayıyı gir: "))
+print(sayi1 + sayi2)
+print(f"{sayi1} + {sayi2} = {sayi1 + sayi2}")
+
+# % böldükten sonra kalanı verir
+
+print(a % b)
+
+
+
+
+
+#ÖDEV:
+
+
+### Soru 1 
+#Yazılımcıların bir dili öğrenmeye başladığında ilk yapacakları şey ekrana "Hello World" yazdırmaktır. Python'da da aynı şeyi yapalım.Bir yazılımcı aşağıdaki kodu yazarken hata yapıyor. Bunu düzelterek çalışan bir kod yazalım.
+
+print ("Hello World")
+
+### Soru 2
+#İki YetGen'li zirvede karşılaşıyor. Zirvede birbirleriyle Python standında konuşurken YetGen Jump Python renginin ne olduğunu konuşurken bir YetGen lideri **logo** değişkenine atayıp ekrana bastırmalarını istiyor. Onlara bu noktada yardımcı olur musun?
+
+logo = "mavi"
+print("YetGen Jump Python renginin rengi:", logo)
+
+### Soru 3
+#Dairenin alanını hesaplayan bir Python kodu yazınız. pi sayısını 3.14 olarak alınız ve yarıçapını kullanıcıdan alınız. Sonucu ekrana bastırınız.
+
+pi=3.14
+yarıçap = float(input("yarıçapı giriniz: "))
+alan = pi * (yarıçap ** 2)
+print("Dairenin alanı: ", alan)
+
+### Soru 4
+#x ve y adında iki liste oluşturunuz. Bu listeleri birbiryle yer değiştirerek yazdırınız.
+
+x=[3,5,7]
+y=[2,4,6]
+print("x=", y)
+print("y=", x)
+
+### Soru 5
+#Aşağıda verilen kod satırının sonuncunu 1 olacak şekilde düzenleyiniz.
+
+(5 - 3) / 2
+
+### Soru 6
+#Aşağıdaki kod satırının sonuncusunu 0 olacak şekilde düzenleyiniz.
+
+8 - (3 * 2) - 1 + 1
+
+### Soru 7
+#YetGen liderlerinden Berkcan, Emirhan ve Eslem, Ramazan Bayramı'nda topladıkları şekerlerini bir araya getirmeyi ve kendi aralarında eşit olarak paylaşmayı kabul ettiler.
+#Eşit paylaşım yapıldıktan sonra kalan şekerler parçalanacak. Örneğin, eğer toplamda 91 şekerleri varsa , her biri 30 tane alıp kalan 1 tane şekeri parçalayacaklar.
+#Kaç tane şekeri parçalayacaklarını hesaplayan bir Python kodu yazınız.
+
+toplam_seker = int(input("Toplam şeker sayısını giriniz: "))
+kalan_seker = toplam_seker % 3
+print("Parçalanacak şeker sayısı: ", kalan_seker)
+
+
+
+
+
+
+
+
+
