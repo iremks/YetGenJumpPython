@@ -138,7 +138,9 @@ print(f"{sayi1} + {sayi2} = {sayi1 + sayi2}")
 
 print(a % b)
 
-
+#TODO: yapılacaklar yazılabilir 
+#IMPORT:
+# %mod, // tam bölme, ** üs alma
 
 
 
