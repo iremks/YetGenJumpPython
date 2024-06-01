@@ -47,7 +47,7 @@ KARAR YAPILARI:
 
 * else yapısı if ve varsa elif yapısının false olduğu durumda ikinci nihai durum olarak çalışır.
 
-* elif yapısına birden çok farklı koşullardan doğacak durumların kontrolünü sağlamak için kullanırız.
+* elif yapısını birden çok farklı koşullardan doğacak durumların kontrolünü sağlamak için kullanırız.
 
 ✓ if koşul:
 # koşul doğruysa Çalışacak kodlar
