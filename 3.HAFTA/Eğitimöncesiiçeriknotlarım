@@ -1,0 +1,284 @@
+#== iki değerin birbirine eşit olup olmadığını kontrol eder true false döndürür.eşit ise true değilse false
+#!= eşit değil mi demek bu sefer tam tersi eşit değil ise true , eşitse false döndürür
+
+a,b,c,d= 5,5,10,4
+print(a==b) #true
+print(a==c) #false
+
+username="admin"
+password="12345"
+print("Berkcan"==username) #false
+
+print(a != b) #false
+print(a != c) #true
+print(a > b) #false
+
+AND OPERATÖRÜ:
+t and t = true
+t and f = false
+f and t = false
+f and f = false
+
+x=int(input("bir sayı gir:"))
+print(x>5 and x<100)
+
+OR OPERATÖRÜ:
+t or t = true
+t or f = true
+f or t = true
+f or f = false
+
+x=int(input("sayı gir:"))
+print(x>0 or x%2 ==0)   #x 2'ye tam bölünüyor mu
+
+NOT OPERATÖRÜ:
+true ise false; false ise true
+
+print(not(true)) #false
+
+
+KARAR YAPILARI:
+
+* Eğer if bloğu doğruysa diğer durumlara bakılmaz ve if bloğu altındaki kodlar çalışır.
+
+* else yapısının kullanılması zorunlu değildir olsa da olur olmasada olur.
+
+* elif yapısının kullanılması zorunlu değildir olsa da olur olmasada olur.
+
+* else yapısı if ve varsa elif yapısının false olduğu durumda ikinci nihai durum olarak çalışır.
+
+* elif yapısına birden çok farklı koşullardan doğacak durumların kontrolünü sağlamak için kullanırız.
+
+✓ if koşul:
+# koşul doğruysa Çalışacak kodlar
+
+elif koşul2:
+# koşul2 doğruysa çalışacak kodlar
+
+else:
+# koşul ve koşul2 yanlışsa çalışacak kodlar
+
+if 3>1:
+    print("If bloğu çalıştı")
+print("program sonlandı") #ilk koşul sağlandı o yüzden ikisi de yazıldı
+
+if 0>1:
+    print("If bloğu çalıştı")
+print("program sonlandı") #ilki sağlanamadı o yüzden ikinci yazıldı sadece
+
+örnek:
+sayil = int(input("1.sayıyı giriniz : "))
+sayi2 = int(input("2.sayıyı giriniz : "))
+if sayil > sayi2:
+    print("1. sayı, 2.sayıdan büyüktür.")
+elif sayil == sayi2:
+    print("Sayılar birbirine eşittir.")
+elif sayil < sayi2:
+    print("2.sayı, 1. sayıdan büyüktür")
+
+örnek:
+a =10
+b =20
+c =30
+if a> b and b > c:
+    print(f"{a} sayısı {b} sayısından büyüktür ve {b} sayısı {c} sayısından büyüktür.")
+if a <b and b <c:
+    print(f"{a} sayısı {b} sayısından küçüktür ve {b} sayısı {c} sayısından küçüktür.")
+else:
+    print("Bu koşullar tutmadı")
+10 sayısı 20 sayısından küçüktür ve 20 sayısı 30 sayısından küçüktür.
+
+örnek:
+sayi3 = 10
+sayi4 = 20
+if sayi3 > 5:
+    print("3.sayı 5'ten büyüktür")
+if sayi4 > 10:
+    print("4.sayı 10'dan büyüktür")
+else:
+    print("İkinci else")
+else:
+    print("Birinci else ")
+çıktı:
+3.sayı 5'ten büyüktür
+4.sayı 10'dan büyüktür
+
+örnek:
+isim ="Berkcan"
+if "Gümüşışık" in isim:
+    print("Varmış")
+else:
+    print("Yokmuş")
+
+NOT:
+Bir sayının çift olup olmadığını ikiye bölümünden kalanı (mod 2) kontrol ederek bulabiliriz.
+Eğer, sayının iki ile bölümü 0 ise (mod 2 = 0), sayı çifttir.
+Eğer, sayının iki ile bölümü 0 değil ise (mod 2 != 0), sayı tektin
+
+örnek:
+sayi = int(input("Bir sayı giriniz : "))
+if sayi % 2 == 0:  #2 ye tam bölünüyor mu ?
+    print(f"{sayi} sayısı çifttir")
+else:
+    print(f"{sayi} sayısı tektir")
+çıktı:
+32 sayısı çifttir
+
+IN OPERATÖRÜ:
+içinde var mı yok mu ?
+
+string="yetgen"
+"p" in string #false
+
+FOR DÖNGÜSÜ:
+for Döngüsü, listelerin, demetlerin, stringlerin ve hatta sözlüklerin üzerinde 
+dolaşmamızı sağlayan bir döngü türüdür. Yapısı şu şekildedir:
+for eleman in veriYapisi:
+Yapılacak İşlemler
+
+örnekler:
+liste=[1,2,3,4,5]
+for i in liste:
+    print(i)
+çıktı:
+1
+2
+3
+4
+5
+
+örnek2:
+liste=[1,2,3,4,5]
+for i in liste:
+print(i**2)
+çıktı:
+1
+4
+9
+16
+25
+
+örnek3:
+string="yetgen jump"
+for string1 in string:
+    print(string1)
+çıktı:
+y
+e
+t
+g
+e
+n
+j
+u
+m
+p
+
+örnek4:
+sayilar="12345"
+for x in sayilar:
+    print(int(x)*int(x))
+çıktı:
+1
+4
+9
+16
+25
+
+WHILE DÖNGÜSÜ:
+* while döngüleri belli bir koşul sağlandığı sürece bloğundaki işlemleri gerçekleştirmeye devam eder.
+ while döngülerinin sona ermesi için koşul durumunun bir süre sonra False olması gereklidir. 
+ Yapısı şu şekildedir;
+while koşul:
+Yapılacak İşlemler
+
+örnek:
+sum = 0
+i = 1
+while i < 11:
+    sum += i #sum = sum + i
+    i+=1 #bunu koymassak sonsuz loopa girer
+print("Toplam : sum")
+çıktı:
+Toplam: 55
+
+range()FONKSİYONU:
+-range(başlangıç,bitiş,artış miktarı) şeklinde kullanılır.
+
+örnek:
+print(range(1,10,2))
+çıktı:
+range(1,10,2)
+
+for x in range(1,5,2)
+    print(x)
+çıktı:
+1
+3
+5??
+
+for x in range(5)
+    print(x)
+çıktı:
+0
+1
+2
+3
+4
+
+BREAK:
+ifadesi döngüsü sonlandırır
+
+CONTINUE:
+döngünün sonraki adımına gerçekleştirmeye
+
+i=0
+while i<10:
+    if(i==5):
+        break
+    else:
+        print(i)
+    i+=1
+çıktı:
+0
+1
+2
+3
+4
+
+for i in range(7):
+    if i==5:
+        continue
+    print(i)
+çıktı:
+0
+1
+2
+3
+4
+6
+
+while True:
+    print("Uygulamadan çıkmak için q tuşuna basınız")
+    yas = input("Yaş: ")
+    if(yas == "q"):
+        break
+    else:
+        print("Yaşınız: ", yas)
+çıktı:
+Uygulamadan çıkmak için q tuşuna basınız
+Yaşınız: 23
+Uygulamadan çıkmak için q tuşuna basınız
+Yaşınız : 24
+Uygulamadan çıkmak için q tuşuna basınız
+Yaşınız: 25
+Uygulamadan çıkmak için q tuşuna basınız
+
+
+
+
+
+
+
+
+
