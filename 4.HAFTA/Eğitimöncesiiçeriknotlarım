@@ -1,0 +1,360 @@
+LİSTELER
+[] şeklinde yazılırlar 
+indexleme,veri güncelleme,silme,veri ekleme gibi işlemler yapılabilir
+iç içe listeleme işlemi yapılabilir
+
+liderler=["ahmet","eslem","berkcan","çağla" ]
+print(liderler)
+çıktı:["ahmet","eslem","berkcan","çağla" ]
+
+print(liderler[0])
+çıktı: ahmet
+
+print(liderler[-1])
+çıktı: çağla
+..............................................................
+APPEND(): LİSTENİN SONUNA ELEMAN EKLER
+REMOVE(): LİSTENİN İÇERİSİNDEKİ ELEMANI SİLER
+
+liderler.append("emirhan")
+print(liderler)
+çıktı:["ahmet","eslem","berkcan","çağla","emirhan" ]
+
+liderler.remove("berkcan")
+print(liderler)
+çıktı:["ahmet","eslem","çağla","emirhan" ]
+
+liderler[2]="berkcan" #2.elemanın yerini güncelle
+print(liderler)
+çıktı:["ahmet","eslem","berkcan","emirhan" ]
+............................................................
+LEN(): LİSTENİN UZUNLUĞUNU VERİR
+
+print(len(liderler))
+çıktı:4
+
+CLEAR(): LİSTENİN İÇERİSİNDEKİ ELEMANLARI SİLER
+liderler.clear()
+liderler
+çıktı: []
+
+INDEX():
+listedeki elemanın indexini verir.
+aranan veriyi ilk bulduğunda durur. Diğer verilerde aynı veri varsa getirmez.
+eğer veri bulunamazsa ValueError hatası verir.
+
+sehirler =list(("ankara","istanbul","izmir"))
+print(sehirler)
+çıktı: [ "ankara","istanbul","izmir" ]
+
+print("ankara'nın indexi:",sehirler.index("ankara"))
+ya da şu print("ankara'nın indexi:" + str(sehirler.index("ankara")))
+çıktı: ankara'nın indexi: 0
+
+print("antalya'nın indexi:",sehirler.index("antalya"))
+çıktı:ValueError
+
+POP():LİSTEDEKİ ELEMANI SİLER
+index verilmezse son elemanı siler
+index verilirse verilen indexdeki elemanı siler
+
+sehirler.pop()
+çıktı:'izmir'
+
+sehirler.pop(0)
+çıktı:'ankara'
+
+INSERT(): İSTENİLEN İNDEXE ELEMAN EKLER
+
+sehirler.insert(0,"adana")
+sehirler.insert(1,"istanbul")
+sehirler.insert(2,"izmir")
+print(sehirler)
+['adana', 'istanbul' ,'izmir', 'adana' ,'istanbul' ,'ankara','istanbul']
+
+REVERSE(): LİSTEYİ TERS ÇEVİRİR
+
+print(sehirler.reverse()) #önce bu onaylanacak 
+sonra:
+sehirler.reverse()
+print(sehirler)
+çıktı: tersi şehirlerin
+
+SORT(): LİSTEYİ KÜÇÜKTEN BÜYÜĞE SIRALAR
+
+sehirler.sort()
+print(sehirler)
+çıktı: adana,adana,ankara,ist,ist,ist,izmir
+
+LİSTE TOPLAMA
+iki listeyi toplar
+
+liste1=["berkcan","Ahmet"]
+liste2=["enes","çağla"]
+print(liste1+liste2)
+çıktı:["berkcan","Ahmet","enes","çağla"]
+
+nestedlist= [1,5,"berkcan",4,[6,"z"]]
+print(nestedlist[0])
+çıktı: 1
+
+print(nestedlist[4][0])
+print(nestedlist[4][1])
+çıktı: 6
+z
+
+TUPLE(DEMET)
+listelere benzer
+aradaki fark tuple elemanlarının değiştirilemez,listenin ise değiştirilebilir olmasıdır
+performanslı bir data sağlar 
+() içerisinde tanımlanabilir
+iç içe tuple oluşturulabilir
+liste içerisinde tuple,tuple içeriisnde liste tnaımlamak mümkün
+bir kere tanımlandıktan sonra değiştirilemezler yalnızca okunurlar
+tek elemansa tuple olduğunu belirtmek için virgül koyulmalıdır
+
+tupleList=(2,4,6,"ankara",[2,4,6])
+print(type(tupleList))
+çıktı: <class 'tuple'>
+
+print(tupleList)
+(2,4,6,"ankara",[2,4,6])
+
+print(len(tupleList))
+çıktı: 5
+
+tupleList[0] = 5
+print(tupleList)
+çıktı: error verdi
+
+print(tupleList[-2])
+çıktı: ankara
+
+print(tupleList[1:2])
+çıktı: (4,)
+
+SET:
+listeye benzer
+indexsiz ve sırasız elemanlardan oluşur
+veri tekrarı söz konusu değildir. tüm elemanlar eşsiz
+{} içerisinde yazılır
+çok hızlıdır
+
+liderler={"berkcan","ahmet","ahmet"}
+print(liderler)
+print(type(liderler))
+çıktı: {'ahmet','berkcan'}
+çıktı: <class 'set'>
+
+print(type(liderler[0]))
+çıktı: error verdi.setler indexlenemez
+
+for lider in liderler
+    print(lider)
+çıktı: Ahmet
+berkcan
+
+print("berkcan"in liderler)
+çıktı: True
+
+SET METODLARI
+add() eleman ekleme
+remove() çıkarma
+clear() elemanları silme
+pop() son elemanı siler
+update() eleman ekler
+union() iki seti birleştirir
+intersection() iki setin kesişimini alır
+difference() fark alma
+
+liderler.add("enes")
+print(liderler)
+çıktı:
+{'ahmet' ,'berkcan', 'enes'}
+
+liderler.update(['emirhan','eslem','çağla'])
+print(liderler)
+çıktı:
+{ 'eslem','ahmet','çağla','berkcan','emirhan','enes'}
+
+liderler.remove("berkcan")
+print(liderler)
+çıktı:
+{ 'eslem','ahmet','çağla','emirhan','enes'}
+
+liderler.pop()
+print(liderler)
+çıktı:
+{'ahmet','çağla','emirhan','enes'}#soldan siler
+
+set1={1,2,3}
+set2={2,3,4}
+set1.union(set2)
+çıktı:   
+{1,2,3,4}
+
+set1.intersection(set2)
+çıktı:   
+{2,3}
+
+set1.difference(set2)
+çıktı:   
+{1}
+
+set2.difference(set1)
+çıktı:   
+{4}
+
+set1.clear(set1)
+çıktı set()
+
+DICTIONARY(SÖZLÜK)
+sırasız veri tutar
+günlük hayatta olan sözlükler gibi düşünülebilir
+{} yazılır
+key: anahtar-bir bilgiye ulaşmak için kullanılır
+value:değer
+key-value için örnek verecek olursak: {06:"ankara"} 06 key ankara value
+dict("") şeklinde de sözlük yazılır
+sözlüklere int,float,string ya da tuple veri tipleri kullanılırken liste ve sözlükler kullanılmaz
+
+sozluk={"book":"kitap", "table":"masa"}
+print(sozluk)
+print(type(sozluk))
+çıktı:
+{'book':'kitap', 'table': 'masa'}
+<class 'dict'>
+
+print(sozluk["table"])
+çıkıt: masa
+
+sozluk["pencil"]="kalem"
+print(sozluk)
+çıktı:
+{"book":"kitap", "table":"masa","pencil":"kalem"} 
+
+EKLEME 
+
+sozluk["book"]="kitaplar"
+print(sozluk)
+çıktı:
+{"book":"kitaplar", "table":"masa","pencil":"kalem"}
+
+SİLME
+
+del(sozluk["book"])
+print(sozluk)
+çıktı:
+{"table":"masa","pencil":"kalem"}
+
+VALUE'NUN SÖZLÜK OLMASI
+
+sozlukValue={1:{"tl":"turkiye"}}
+print(sozlukValue)
+çıktı:
+1:{"tl":"turkiye"}
+
+METODLARI:
+keys() sözlükteki keyleri verir
+values() valueları verir
+items() key ve value çiftlerini verir
+
+sozluk.keys()
+çıktı:
+dict_keys(['table','pencil'])
+
+sozluk.values()
+çıktı:
+dict_values(['masa','kalem'])
+
+sozluk.items()
+çıktı:
+dict_items([('table','masa'),('pencil','kalem')])
+
+STRİNG PARÇALAMA:
+x="yetgen"
+print(x[2:5])
+çıktı: tge #2,3,4.eleman
+
+print(x[2:])
+çıktı:tgen
+
+print(x[:2])
+çıktı:ye
+
+print(x[::-1])
+çıktı:negtey
+
+SRTİNG METODLARI
+len() uzunluğunu verir
+
+print(len(x))
+6
+
+upper() harfleri büyük yapar
+x.upper() 
+x.lower()
+x.capitalize() ilk harf büyür
+x.swapcase() büyük küçük küçük büyük
+replace() veriyi değiştirir
+
+x.replace("e","a")
+çıktı:'yatgan'
+
+split() parçalar
+
+bilgi="irem kasar 23 ankara"
+print(bilgi.split(" "))
+çıktı: ['irem', 'kasar','23' ,'ankara']
+
+bilgi2="irem; kasar; 23; ankara""
+print(bilgi2.split("; "))
+çıktı: ['irem'; 'kasar';'23' ;'ankara']
+
+strip() başındaki ve sonundaki boşluklar silinir
+bosluk="     yetgen      "
+print(bosluk.strip())
+çıktı:yetgen
+
+startwith() belirtilen karakterle başlamış mı kontrol eder
+endwith() belirtilen karakterle bitmiş mi kontrol eder
+
+print(bosluk.startwith("y"))
+çıktı:False
+
+yetgen= "YetGen"
+print(yetgen.startswith("y"))
+çıktı:False
+
+print(yetgen.endswith("en"))
+True
+
+find() içerisindeki verinin indexini verir. eğer veri yoksa -1 döndürür
+index() içerisindeki verinin indexini verir. eğer veri yoksa ValueError
+
+print(yetgen.find("en"))
+çıktı:4
+
+print(yetgen.find("m"))
+çıktı:-1
+
+print(yetgen.index("en"))
+çıktı:4
+ 
+print(yetgen.index("m"))
+çıktı:ValueError
+
+isalpha() tüm karakerler alfabetik mi ?
+
+print(yetgen.isalpha())
+çıktı: True
+
+print("abc".isalpha())
+çıktı: True
+
+isdigit() rakam mı değil mi
+
+print("123".isdigit())
+çıktı:True
+
+
